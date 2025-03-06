@@ -12,9 +12,6 @@ import (
 func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, I'm Scribe!")
 
-
-
-	
 }
 
 // HandleRequests handles incoming HTTP requests.
