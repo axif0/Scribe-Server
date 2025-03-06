@@ -12,7 +12,7 @@ if [ -n "${GOFMT_FILES}" ]; then
     gofmt -w .
     git add ${GOFMT_FILES}
     echo "Files have been formatted and staged."
-    exit 1
+    exit 0
 fi
 
 echo "No files need formatting."
