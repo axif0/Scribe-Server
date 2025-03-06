@@ -10,10 +10,12 @@ if [ -n "${GOFMT_FILES}" ]; then
     echo "${GOFMT_FILES}"
     echo "Running gofmt -w ."
     gofmt -w .
-    git add ${GOFMT_FILES}
-    echo "Files have been formatted and staged."
-    exit 0
+    echo -e "\n❌ Some files were not properly formatted. Changes have been made."
+    echo -e "👉 Please review the changes and run 'git add' on the formatted files:"
+    echo "${GOFMT_FILES}"
+    echo -e "\nThen try to commit again."
+    exit 1
 fi
 
-echo "No files need formatting."
+echo "✅ All files are properly formatted."
 exit 0 
